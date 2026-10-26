@@ -18,3 +18,5 @@
 后续追加：2026-10-27 收到 [LL-02 手写作答](../attachments/codex-clipboard-bdc4e39d-af4d-4a91-bd2a-9594307d67df.jpg)，已加入附件清单与 SHA-256 校验。判读假设、反馈和修正保存在 [LL-02 批改](../notes/408-LL-02-review.md)，与最初 4 张原聊天照片分开记录。
 
 后续追加：2026-10-27 收到 [M2-01 数学二手写作答](../attachments/codex-clipboard-b231428f-c5a2-44ed-b2e2-d762d9d17d3b.jpg)，已复制并加入附件清单与 SHA-256 校验；可辨步骤、判读限制及反馈见 [M2-01 批改](../notes/M2-01-review.md)。
+
+后续追加：2026-10-27 收到 [M2-01-R1 右导数补充照片](../attachments/codex-clipboard-509782a1-6117-4b8b-a824-90de3b483ad2.jpg)，已复制并加入附件清单与 SHA-256 校验；反馈后作答与首次作答分开记录，见 [M2-01 批改](../notes/M2-01-review.md)。

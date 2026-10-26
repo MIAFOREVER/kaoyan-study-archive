@@ -30,5 +30,11 @@
     "status": "copied",
     "sha256": "7d16d568a04f29ac6c6f058d357c167bcaf7d24a44e44dafd06de7fdfe8519b2",
     "description": "2026-10-27 M2-01 数学二极限、连续与可导手写作答"
+  },
+  {
+    "file": "attachments/codex-clipboard-509782a1-6117-4b8b-a824-90de3b483ad2.jpg",
+    "status": "copied",
+    "sha256": "3683bea8dc251b48941333feecba353f9eee5d43857ccffd69d0a6e3a3146338",
+    "description": "2026-10-27 M2-01-R1 反馈后补充右导数作答"
   }
 ]
