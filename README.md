@@ -12,6 +12,7 @@
 | 最近一周可执行安排 | [第一周计划](plans/2026-10-27-week-01.md) |
 | 408 薄弱点与讲解顺序 | [408 恢复路线](plans/408-recovery.md) |
 | 当前微课与待答练习 | [01：指针与链表反转](notes/408-01-pointer-reversal.md) |
+| 头指针与头结点的区别 | [01 补充：链表头部形式](notes/408-01a-list-heads.md) |
 | 约两个月的阶段安排与调整规则 | [阶段计划](plans/roadmap.md) |
 | 408 逐题得分和原始诊断 | [诊断记录](assessments/2026-10-27-408-diagnostic.md) |
 | 原卷，含尚未验证的大题 | [408 原创诊断卷](assessments/2026-10-26-408-paper.md) |
