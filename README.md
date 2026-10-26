@@ -32,4 +32,17 @@
 
 只把已发生的学习写进日志；计划与已完成分开。听懂讲解、原题做对、新题独立做对、隔日复测通过分别记录。每周据实际时间和复测结果调整下一周。
 
-本目录已使用 Git 保存版本。每次阶段性更新可提交一次；当前没有配置远程仓库。原聊天 [生成 408 标准试题](codex://threads/01a178e3-1cdb-75b3-81eb-a9ab15c4cbb2) 已归入「考研」项目。
+本目录已使用 Git 保存版本，GitHub 公有仓库为 [MIAFOREVER/kaoyan-study-archive](https://github.com/MIAFOREVER/kaoyan-study-archive)，远程名称为 `origin`，主分支为 `main`。每次阶段性更新提交后，用 `git push` 同步备份；本地文件不会自动上传。
+
+日常同步流程：
+
+```sh
+git pull --ff-only
+# 更新学习记录后，检查并提交本次修改
+git status
+git add <本次更新的文件>
+git commit -m "更新学习记录与复习计划"
+git push
+```
+
+换电脑时，可运行 `git clone https://github.com/MIAFOREVER/kaoyan-study-archive.git` 获取档案。原聊天 [生成 408 标准试题](codex://threads/01a178e3-1cdb-75b3-81eb-a9ab15c4cbb2) 已归入「考研」项目；此聊天链接需在有访问权限的 Codex 中打开，GitHub 上可直接阅读 [对话存档](archive/2026-10-26_27-408-conversation.md)。
