@@ -11,7 +11,7 @@
 | 当前水平、时间约束与待确认事项 | [STATUS.md](STATUS.md) |
 | 最近一周可执行安排 | [第一周计划](plans/2026-10-27-week-01.md) |
 | 408 薄弱点与讲解顺序 | [408 恢复路线](plans/408-recovery.md) |
-| 当前 Cache 微课与待答题 | [第 2 步：跨块访问与命中率，CA-02](notes/408-cache-02-boundaries.md) · [CA-01 已答对](notes/408-cache-01-blocks.md) |
+| 当前 Cache 微课与待答题 | [第 3 步：主存块与 Cache 行，CA-03](notes/408-cache-03-lines.md) · [CA-02 已答对](notes/408-cache-02-boundaries.md) |
 | 当前编程练习与批改 | [LL-02 题目](assessments/2026-10-27-LL-02-reversal.md) · [用户单行订正已验证](notes/408-LL-02-review.md) |
 | 前序微课与推演练习 | [01：指针与链表反转](notes/408-01-pointer-reversal.md) |
 | 头指针与头结点的区别 | [01 补充：链表头部形式](notes/408-01a-list-heads.md) |
