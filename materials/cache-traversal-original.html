@@ -1,0 +1,75 @@
+<div id="cache-tutor-43">
+  <h3>第 43 题 · Cache 访问过程</h3>
+  <div class="viz-controls">
+    <label class="form-label">遍历顺序
+      <select class="form-select" id="ct-mode"><option value="row">按行：先读完一行</option><option value="col">按列：先读完一列</option></select>
+    </label>
+  </div>
+  <label class="form-label" for="ct-step">已执行访问：<span id="ct-step-label" class="tabular-nums">1 / 128</span></label>
+  <input class="form-range" id="ct-step" type="range" min="0" max="128" value="1" step="1">
+  <div id="ct-detail" aria-live="polite"></div>
+  <table class="table table-sm">
+    <thead><tr><th scope="col">Cache 行</th><th scope="col">有效位</th><th scope="col">Tag（十进制）</th><th scope="col">当前保存的数据</th></tr></thead>
+    <tbody id="ct-lines"></tbody>
+  </table>
+  <div id="ct-count" class="tabular-nums" aria-live="polite"></div>
+</div>
+<style>
+  #cache-tutor-43 #ct-detail { margin: 12px 0; }
+  #cache-tutor-43 tr.ct-active { background: color-mix(in srgb, var(--viz-series-1) 12%, transparent); }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('cache-tutor-43');
+  const mode = root.querySelector('#ct-mode');
+  const step = root.querySelector('#ct-step');
+  const label = root.querySelector('#ct-step-label');
+  const detail = root.querySelector('#ct-detail');
+  const tbody = root.querySelector('#ct-lines');
+  const count = root.querySelector('#ct-count');
+  function render() {
+    const n = Number(step.value);
+    const slots = Array(8).fill(null);
+    let hits = 0, misses = 0, last = null;
+    for (let k = 0; k < n; k++) {
+      const i = mode.value === 'row' ? Math.floor(k / 16) : k % 8;
+      const j = mode.value === 'row' ? k % 16 : Math.floor(k / 8);
+      const block = Math.floor((4096 + 4 * (i * 16 + j)) / 32);
+      const line = block % 8;
+      const old = slots[line];
+      const hit = old === block;
+      if (hit) hits++; else { misses++; slots[line] = block; }
+      last = {i,j,block,line,old,hit};
+    }
+    label.textContent = n + ' / 128';
+    detail.textContent = last ? 'A[' + last.i + '][' + last.j + '] → 主存块 ' + last.block + ' → Cache 行 ' + last.line + '：' + (last.hit ? '命中' : last.old === null ? '未命中，装入空行' : '未命中，替换主存块 ' + last.old) : '初始状态：8 行均无有效数据';
+    tbody.replaceChildren();
+    slots.forEach((block,line) => {
+      const tr = document.createElement('tr');
+      if (last && last.line === line) tr.className = 'ct-active';
+      const b = block === null ? null : block - 128;
+      const r = b === null ? null : Math.floor(b / 2);
+      const start = b === null ? null : (b % 2) * 8;
+      const vals = [line, block === null ? 0 : 1, block === null ? '—' : Math.floor(block / 8), block === null ? '空' : 'A[' + r + '][' + start + '…' + (start + 7) + ']'];
+      vals.forEach(v => { const td = document.createElement('td'); td.textContent = String(v); tr.appendChild(td); });
+      tbody.appendChild(tr);
+    });
+    count.textContent = '命中 ' + hits + ' 次 · 未命中 ' + misses + ' 次 · 命中率 ' + (n ? (100 * hits / n).toFixed(1) + '%' : '—');
+  }
+  function restore(state) {
+    const s = state && state.modelContent;
+    if (!s || s.kind !== 'cache-43') return;
+    mode.value = s.order === 'col' ? 'col' : 'row';
+    step.value = Number.isInteger(s.accesses) ? Math.max(0, Math.min(128, s.accesses)) : 1;
+  }
+  function save() {
+    if (window.openai && window.openai.setWidgetState) window.openai.setWidgetState({modelContent:{kind:'cache-43',order:mode.value,accesses:Number(step.value)},privateContent:null}).catch(() => {});
+  }
+  restore(window.openai && window.openai.widgetState);
+  mode.addEventListener('change', () => { render(); save(); });
+  step.addEventListener('input', render);
+  step.addEventListener('change', save);
+  window.addEventListener('openai:set_globals', e => { if (e.detail && e.detail.globals && 'widgetState' in e.detail.globals) { restore(e.detail.globals.widgetState); render(); } });
+  render();
+})();
+</script>
