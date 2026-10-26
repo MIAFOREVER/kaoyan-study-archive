@@ -20,3 +20,5 @@
 后续追加：2026-10-27 收到 [M2-01 数学二手写作答](../attachments/codex-clipboard-b231428f-c5a2-44ed-b2e2-d762d9d17d3b.jpg)，已复制并加入附件清单与 SHA-256 校验；可辨步骤、判读限制及反馈见 [M2-01 批改](../notes/M2-01-review.md)。
 
 后续追加：2026-10-27 收到 [M2-01-R1 右导数补充照片](../attachments/codex-clipboard-509782a1-6117-4b8b-a824-90de3b483ad2.jpg)，已复制并加入附件清单与 SHA-256 校验；反馈后作答与首次作答分开记录，见 [M2-01 批改](../notes/M2-01-review.md)。
+
+后续追加：2026-10-27 收到 M2-02 定积分[换元草稿](../attachments/codex-clipboard-e6508587-b22b-4c57-b38f-5fe5e687bbb7.jpg)与[原函数及代入结果](../attachments/codex-clipboard-7b5401c7-25c8-4000-a38e-c1ad4c1052d2.jpg)两张照片，均已复制并记录 SHA-256；[批改与转录](../notes/M2-02-review.md)保留未划掉的最终表达式与判读依据。

@@ -36,5 +36,17 @@
     "status": "copied",
     "sha256": "3683bea8dc251b48941333feecba353f9eee5d43857ccffd69d0a6e3a3146338",
     "description": "2026-10-27 M2-01-R1 反馈后补充右导数作答"
+  },
+  {
+    "file": "attachments/codex-clipboard-e6508587-b22b-4c57-b38f-5fe5e687bbb7.jpg",
+    "status": "copied",
+    "sha256": "5181eb1acd70fb61b1c73fb17252f9f152b72af230d3009f3599b2052c2739eb",
+    "description": "2026-10-27 M2-02 定积分手写作答，第 1 张"
+  },
+  {
+    "file": "attachments/codex-clipboard-7b5401c7-25c8-4000-a38e-c1ad4c1052d2.jpg",
+    "status": "copied",
+    "sha256": "2f6dea13edd343a69270ed6aa3ac8253a118864db7aef7229388f93844f4320d",
+    "description": "2026-10-27 M2-02 定积分手写作答，第 2 张"
   }
 ]
