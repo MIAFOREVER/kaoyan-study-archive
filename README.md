@@ -11,7 +11,7 @@
 | 当前水平、时间约束与待确认事项 | [STATUS.md](STATUS.md) |
 | 最近一周可执行安排 | [第一周计划](plans/2026-10-27-week-01.md) |
 | 408 薄弱点与讲解顺序 | [408 恢复路线](plans/408-recovery.md) |
-| 当前待答编程题 | [LL-02：带头结点的单链表反转](assessments/2026-10-27-LL-02-reversal.md) |
+| 当前编程练习与批改 | [LL-02 题目](assessments/2026-10-27-LL-02-reversal.md) · [头插法纠错与待答 R1](notes/408-LL-02-review.md) |
 | 前序微课与推演练习 | [01：指针与链表反转](notes/408-01-pointer-reversal.md) |
 | 头指针与头结点的区别 | [01 补充：链表头部形式](notes/408-01a-list-heads.md) |
 | 约两个月的阶段安排与调整规则 | [阶段计划](plans/roadmap.md) |
